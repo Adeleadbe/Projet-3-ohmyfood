@@ -1,0 +1,40 @@
+.location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    background: rgb(170,162,162);
+    background: linear-gradient(180deg, rgba(209, 209, 209) 0%, rgba(234, 234, 234) 11%);
+    & i {
+        width: 32px;
+        height: 20px;
+        font-size: 18px;
+    }
+    & p {
+        font-weight: bold;
+        font-size: 17px;
+        padding-right: 25px;
+    }
+}
+
+.company-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #F6F6F6;
+    height: 310px;
+    padding: 5px 25px;
+    & h1 {
+        font-size: 26px;
+        margin: 0 25px;
+    }
+    & h2 {
+        font-size: 18px;
+        font-weight: lighter;
+        padding-bottom: 20px;
+    }
+}
+
