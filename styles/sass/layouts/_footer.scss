@@ -19,5 +19,12 @@ footer {
             padding-right: 10px;
             font-size: 14px;
         }
+        & a {
+            color: $color-primary;
+            text-decoration: none;
+        }
     }
 }
+.footer-restaurant {
+    margin-top: -60px;
+    }

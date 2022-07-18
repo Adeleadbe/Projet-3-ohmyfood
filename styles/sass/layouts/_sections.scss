@@ -1,10 +1,3 @@
-h1, h2 {
-    font-size: $font-big-size;
-}
-h3, i {
-    font-size: $font-base-size;
-}
-
 .location {
     display: flex;
     flex-direction: row;
@@ -80,16 +73,39 @@ h3, i {
     }
 }
 
-.all-restaurant {
+.picture-restaurant {
+    width: 100%;
+    height: 250px;
+}
+
+.all-menus {
     background-color: $color-primary;
-    padding-top: 20px;
-    padding-bottom: 75px;
-    & h2 {
-        width : 89%;
-        margin: 24px 15px 15px 20px;
+    border-radius: 45px 45px 0 0;
+    position: relative;
+    bottom: 63px;
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+article {
+    width: 90%;
+    margin: auto;
+    & .title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 12px;
+    margin-right: 15px;
+    & h1 {
+    font-weight: lighter;
+    } 
+    & i {
+        font-size: 155%;
+        align-self: center;
     }
-    & a {
-        text-decoration: none;
+    }
+    & .menu-card__btn {
+        text-align: center;
     }
 }
 

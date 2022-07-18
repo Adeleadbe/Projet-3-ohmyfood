@@ -4,8 +4,25 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.restaurant-title, .txt-logo {
+.restaurant-title, .txt-logo, article h1 {
   font-family: "Shrikhand", cursive;
+}
+
+h1, h2 {
+  font-size: 26px;
+}
+
+h3, i, .menu-card h2 {
+  font-size: 18px;
+}
+
+.card-dish p {
+  font-size: 15px;
+}
+
+.menu-card h2 {
+  text-transform: uppercase;
+  font-weight: lighter;
 }
 
 .btn {
@@ -55,13 +72,13 @@ footer li i {
   padding-right: 10px;
   font-size: 14px;
 }
-
-h1, h2 {
-  font-size: 26px;
+footer li a {
+  color: #F6F6F6;
+  text-decoration: none;
 }
 
-h3, i {
-  font-size: 18px;
+.footer-restaurant {
+  margin-top: -60px;
 }
 
 .location {
@@ -141,6 +158,51 @@ h3, i {
   padding-top: 6px;
 }
 
+.picture-restaurant {
+  width: 100%;
+  height: 250px;
+}
+
+.all-menus {
+  background-color: #F6F6F6;
+  border-radius: 45px 45px 0 0;
+  position: relative;
+  bottom: 63px;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+article {
+  width: 90%;
+  margin: auto;
+}
+article .title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 12px;
+  margin-right: 15px;
+}
+article .title h1 {
+  font-weight: lighter;
+}
+article .title i {
+  font-size: 155%;
+  align-self: center;
+}
+article .menu-card__btn {
+  text-align: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
 .all-restaurant {
   background-color: #F6F6F6;
   padding-top: 20px;
@@ -152,15 +214,6 @@ h3, i {
 }
 .all-restaurant a {
   text-decoration: none;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  box-sizing: inherit;
 }
 
 .card-restaurant {
@@ -206,4 +259,39 @@ html {
   right: 8%;
   bottom: 11%;
   font-size: 155%;
+}
+
+.menu-card {
+  margin-bottom: 50px;
+}
+.menu-card__button {
+  text-align: center;
+}
+.menu-card h2 {
+  border-bottom: 3px solid #99E2D0;
+  width: 45px;
+  height: 28px;
+}
+
+.card-dish {
+  height: 70px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  box-shadow: 0px 4px 12px 0px rgba(94, 93, 93, 0.23);
+  border-radius: 15px;
+}
+.card-dish h3 {
+  width: 100%;
+  margin: 13px 0 8px 12px;
+}
+.card-dish p {
+  margin-left: 12px;
+  margin-top: 0;
+}
+.card-dish__price {
+  margin-right: 20px;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

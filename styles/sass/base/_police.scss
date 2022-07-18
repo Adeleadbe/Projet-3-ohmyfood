@@ -4,6 +4,21 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-.restaurant-title, .txt-logo {
+.restaurant-title, .txt-logo, article h1 {
     font-family: 'Shrikhand', cursive;
+}
+
+h1, h2 {
+    font-size: $font-big-size;
+}
+h3, i, .menu-card h2 {
+    font-size: $font-base-size;
+}
+.card-dish p {
+    font-size: $font-small-size;
+}
+
+.menu-card h2 {
+    text-transform: uppercase;
+    font-weight: lighter;
 }
