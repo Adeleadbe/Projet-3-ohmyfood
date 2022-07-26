@@ -22,3 +22,27 @@ h3, i, .menu-card h2 {
     text-transform: uppercase;
     font-weight: lighter;
 }
+
+@include tablet {
+    h1, h2 {
+        font-size: $font-big-size-tablet;
+    }
+    h3, i, .menu-card h2 {
+        font-size: $font-base-size-tablet;
+    }
+    .card-dish p {
+        font-size: $font-small-size-tablet;
+    }
+}
+
+@include computer {
+    h1, h2 {
+        font-size: $font-big-size;
+    }
+    h3, i, .menu-card h2 {
+        font-size: $font-base-size;
+    }
+    .card-dish p {
+        font-size: $font-small-size;
+    }
+}

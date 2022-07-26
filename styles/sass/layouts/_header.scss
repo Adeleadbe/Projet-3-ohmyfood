@@ -6,8 +6,16 @@ header {
     height: 65px;
     width: 100%;
     padding-bottom: 10px;
+    position: relative;
     & img {
         width: 173px;
         height: 32px;
     }
+    & .back-arrow {
+        position: absolute;
+        left: 20px;
+        background-color: white;
+        border: 0px;
+    }
 }
+

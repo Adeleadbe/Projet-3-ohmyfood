@@ -1,6 +1,6 @@
 footer {
     background-color: #353535;
-    color: #F8F8F8;
+    color: $color-white;
     height: 200px;
     & h2 {
         font-size: $font-base-size;
@@ -20,7 +20,7 @@ footer {
             font-size: 14px;
         }
         & a {
-            color: $color-primary;
+            color: $color-white;
             text-decoration: none;
         }
     }

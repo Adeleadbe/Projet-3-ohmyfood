@@ -2,9 +2,11 @@
 @import "sass/utils/mixins";
 @import "sass/utils/functions";
 @import "sass/base/police";
+@import "sass/components/animations";
 @import "sass/components/buttons";
 @import "sass/layouts/header";
 @import "sass/layouts/footer";
-@import "sass/layouts/sections";
+@import "sass/layouts/article";
+@import "sass/layouts/aside";
 @import "sass/base/box";
 @import "sass/components/cards";

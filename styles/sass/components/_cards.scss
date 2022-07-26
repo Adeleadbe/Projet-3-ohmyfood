@@ -1,5 +1,5 @@
 .all-restaurant {
-    background-color: $color-primary;
+    background-color: $color-white;
     padding-top: 20px;
     padding-bottom: 75px;
     & h2 {
@@ -10,14 +10,14 @@
         text-decoration: none;
     }
 }
+
 .card-restaurant {
-    width: 89%;
     height: 270px;
     border-radius: 15px;
     margin: auto;
     margin-top: 20px;
     position: relative;
-    background-color: white;
+    background-color: $color-white;
     box-shadow: $shadow-bloc;
     color: black;
     & img {
@@ -31,7 +31,7 @@
     }
     &__new {
         position: absolute;
-        background-color: #99E2D0;
+        background-color: $color-tertiary;
         color: #1A9778;
         font-weight: bold;
         text-align: center;
@@ -47,44 +47,137 @@
     &__city {
         margin: 8px 0 0 12px;
     }
-    & i {
+    &__heart {
         position: absolute;
-        right: 8%;
-        bottom: 11%;
-        font-size: 155%;
+        right: 4%;
+        bottom: 9%;
+        border: none;
+        background-color: #F6F6F6;
+        & i {
+            font-size: 155%;
+        }
+    }
+    &:hover {
+        box-shadow: $shadow-bloc-darker;
     }
 }
 
-.menu-card {
-    margin-bottom: 50px;
-    &__button {
-    text-align: center;
-    }
-    & h2 {
-        border-bottom: 3px solid #99E2D0;
-        width: 45px;
-        height: 28px;
+
+.menus {
+    background-color: $color-white;
+    border-radius: 45px 45px 0 0;
+    position: relative;
+    bottom: 63px;
+    width: 100%;
+    padding-bottom: 80px;
+    & .menu-card {
+        margin-bottom: 50px;
+        &__button {
+        text-align: center;
+        }
+        & h2 {
+            border-bottom: 3px solid $color-tertiary;
+            width: 45px;
+            height: 28px;
+        }
     }
 }
 .card-dish {
-    height: 70px;
-    background-color: white;
+    background-color: $color-white;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end;
     margin-top: 15px;
     box-shadow: $shadow-bloc;
     border-radius: 15px;
-    & h3 {
-        width: 100%;
-        margin: 13px 0 8px 12px;
-    }
-    & p {
-        margin-left: 12px;
-        margin-top: 0;
+    overflow: hidden;
+    &__menu {
+        overflow: hidden;
+        flex: 1;
+        & h3 {
+            margin: 13px 0 8px 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        & p {
+            margin-left: 12px;
+            margin-top: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
     &__price {
-        margin-right: 20px;
         font-weight: bold;
+        padding: 8px;
+        & p {
+            margin-left: auto;
+            margin-bottom: 0;
+            padding: 8px;
+        }
+    }
+    &--check {
+        width: 0;
+        display: inline-block;
+        height: 75px;
+        background-color: $color-tertiary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & i {
+            color: $color-white;
+            font-size: 25px;
+        }
+    }
+    &:hover {
+        .card-dish--check {
+            width: 70px;
+            transition: all 0.3s ease-out;
+            & i {
+                transform: rotate(1turn);
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+    
+}
+
+@include tablet {
+    .card-dish {
+        margin-left: 80px;
+    }
+    .card-dish--check {
+        height: 90px;
+    }
+    .card-dish:hover {
+        .card-dish--check {
+        width: 100px;
+        }
+    }
+}
+
+@include computer {
+    .card-dish {
+        margin-left: 0;
+        width: 90%;
+    }
+    .card-dish--check {
+        height: 80px;
+    }
+    .card-dish:hover {
+        .card-dish--check {
+        width: 70px;
+        }
+    }
+    article {
+        margin: auto;
+    }
+    .all-menus {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menus .menu-card {
+        width: 30%;
     }
 }
