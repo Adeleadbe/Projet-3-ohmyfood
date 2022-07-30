@@ -32,7 +32,7 @@
     &__new {
         position: absolute;
         background-color: $color-tertiary;
-        color: #1A9778;
+        color: rgb(26, 151, 120);
         font-weight: bold;
         text-align: center;
         padding-top: 8px;
@@ -52,8 +52,8 @@
         right: 4%;
         bottom: 9%;
         border: none;
-        background-color: #F6F6F6;
-        & i {
+        background-color: $color-white;
+        & .heart--pink {
             font-size: 155%;
         }
     }
@@ -91,6 +91,9 @@
     box-shadow: $shadow-bloc;
     border-radius: 15px;
     overflow: hidden;
+    &:hover {
+        cursor: pointer;
+    }
     &__menu {
         overflow: hidden;
         flex: 1;
@@ -146,13 +149,13 @@
 @include tablet {
     .card-dish {
         margin-left: 80px;
-    }
-    .card-dish--check {
-        height: 90px;
-    }
-    .card-dish:hover {
-        .card-dish--check {
-        width: 100px;
+        &--check {
+            height: 90px;
+        }
+        &:hover {
+            & .card-dish--check {
+            width: 100px;
+            }
         }
     }
 }
@@ -161,13 +164,13 @@
     .card-dish {
         margin-left: 0;
         width: 90%;
-    }
-    .card-dish--check {
-        height: 80px;
-    }
-    .card-dish:hover {
-        .card-dish--check {
-        width: 70px;
+        &--check {
+            height: 80px;
+        }
+        &:hover {
+            & .card-dish--check {
+            width: 70px;
+            }
         }
     }
     article {
@@ -177,7 +180,9 @@
         display: flex;
         justify-content: space-between;
     }
-    .menus .menu-card {
-        width: 30%;
+    .menus {
+        .menu-card {
+            width: 30%;
+        }
     }
 }

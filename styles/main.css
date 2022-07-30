@@ -62,9 +62,13 @@ h3, i, .menu-card h2 {
   width: 120px;
   height: 120px;
   border: 16px solid black;
-  border-top: 16px solid #FF79DA;
+  border-top: 16px solid rgb(255, 121, 218);
   border-radius: 50%;
   animation: spin 1s linear forwards;
+}
+
+.bloc-page {
+  animation: transition-page 1400ms ease-in-out forwards;
 }
 
 @keyframes transition {
@@ -80,11 +84,22 @@ h3, i, .menu-card h2 {
     transform: rotate(0deg);
   }
   25% {
-    border-top: 16px solid #9356DC;
+    border-top: 16px solid rgb(147, 86, 220);
   }
   100% {
     transform: rotate(360deg);
     opacity: 0;
+  }
+}
+@keyframes transition-page {
+  0% {
+    visibility: hidden;
+  }
+  40% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
   }
 }
 .heart--pink {
@@ -94,24 +109,27 @@ h3, i, .menu-card h2 {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   font-weight: 800;
 }
 
-.card-dish {
+.menu-card .card-dish {
   animation-name: appearance-dish;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
-.card-dish__2 {
+.menu-card .card-dish:nth-child(2) {
   animation-delay: 200ms;
 }
-.card-dish__3 {
+.menu-card .card-dish:nth-child(3) {
   animation-delay: 400ms;
 }
-.card-dish__4 {
+.menu-card .card-dish:nth-child(4) {
   animation-delay: 600ms;
+}
+.menu-card .card-dish:nth-child(5) {
+  animation-delay: 800ms;
 }
 
 @keyframes appearance-dish {
@@ -128,7 +146,7 @@ h3, i, .menu-card h2 {
   width: 223px;
   border-radius: 35px;
   border-width: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   color: white;
   box-shadow: 0px 4px 12px 0px rgba(94, 93, 93, 0.23);
 }
@@ -160,8 +178,8 @@ header .back-arrow {
 }
 
 footer {
-  background-color: #353535;
-  color: #F6F6F6;
+  background-color: rgb(53, 53, 53);
+  color: rgb(246, 246, 246);
   height: 200px;
 }
 footer h2 {
@@ -183,7 +201,7 @@ footer li i {
   font-size: 14px;
 }
 footer li a {
-  color: #F6F6F6;
+  color: rgb(246, 246, 246);
   text-decoration: none;
 }
 
@@ -205,7 +223,7 @@ article .title {
 article .title h1 {
   font-weight: lighter;
 }
-article .title i {
+article .title .heart--pink {
   font-size: 155%;
   align-self: center;
 }
@@ -225,16 +243,23 @@ article .menu-card__btn {
     margin-bottom: 13px;
   }
 }
+.picture-restaurant {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+  max-height: 300px;
+}
+
 .location {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #eaeaea;
+  background-color: rgb(234, 234, 234);
   background: rgb(170, 162, 162);
   background: linear-gradient(180deg, rgb(209, 209, 209) 0%, rgb(234, 234, 234) 11%);
 }
-.location i {
+.location__icone {
   width: 32px;
   height: 20px;
 }
@@ -249,7 +274,7 @@ article .menu-card__btn {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #F6F6F6;
+  background-color: rgb(246, 246, 246);
   height: 310px;
   padding: 5px 25px;
 }
@@ -278,7 +303,7 @@ article .menu-card__btn {
   display: flex;
   width: 93%;
   max-width: 340px;
-  background-color: #F6F6F6;
+  background-color: rgb(246, 246, 246);
   box-shadow: 0px 4px 12px 0px rgba(94, 93, 93, 0.23);
   margin: 10px 0 20px 0px;
   height: 70px;
@@ -287,9 +312,9 @@ article .menu-card__btn {
 }
 .explanations__choice p {
   position: absolute;
-  border: 2px solid #9356DC;
-  background-color: #9356DC;
-  color: #F6F6F6;
+  border: 2px solid rgb(147, 86, 220);
+  background-color: rgb(147, 86, 220);
+  color: rgb(246, 246, 246);
   padding: 3px 7px 0px 7px;
   border-radius: 50%;
   left: -13px;
@@ -303,21 +328,9 @@ article .menu-card__btn {
   padding-top: 6px;
 }
 
-.picture-restaurant {
-  width: 100%;
-  max-height: 450px;
-}
-.picture-restaurant--2 {
-  width: 100%;
-  object-fit: cover;
-  max-height: 300px;
-}
-
 @media screen and (min-width: 600px) {
   .picture-restaurant {
     object-fit: cover;
-  }
-  .picture-restaurant--2 {
     max-height: 450px;
   }
   .explanations__choice h3 {
@@ -352,7 +365,7 @@ html {
 }
 
 .all-restaurant {
-  background-color: #F6F6F6;
+  background-color: rgb(246, 246, 246);
   padding-top: 20px;
   padding-bottom: 75px;
 }
@@ -370,7 +383,7 @@ html {
   margin: auto;
   margin-top: 20px;
   position: relative;
-  background-color: #F6F6F6;
+  background-color: rgb(246, 246, 246);
   box-shadow: 0px 4px 12px 0px rgba(94, 93, 93, 0.23);
   color: black;
 }
@@ -385,8 +398,8 @@ html {
 }
 .card-restaurant__new {
   position: absolute;
-  background-color: #99E2D0;
-  color: #1A9778;
+  background-color: rgb(153, 226, 208);
+  color: rgb(26, 151, 120);
   font-weight: bold;
   text-align: center;
   padding-top: 8px;
@@ -406,9 +419,9 @@ html {
   right: 4%;
   bottom: 9%;
   border: none;
-  background-color: #F6F6F6;
+  background-color: rgb(246, 246, 246);
 }
-.card-restaurant__heart i {
+.card-restaurant__heart .heart--pink {
   font-size: 155%;
 }
 .card-restaurant:hover {
@@ -416,7 +429,7 @@ html {
 }
 
 .menus {
-  background-color: #F6F6F6;
+  background-color: rgb(246, 246, 246);
   border-radius: 45px 45px 0 0;
   position: relative;
   bottom: 63px;
@@ -430,13 +443,13 @@ html {
   text-align: center;
 }
 .menus .menu-card h2 {
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid rgb(153, 226, 208);
   width: 45px;
   height: 28px;
 }
 
 .card-dish {
-  background-color: #F6F6F6;
+  background-color: rgb(246, 246, 246);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -444,6 +457,9 @@ html {
   box-shadow: 0px 4px 12px 0px rgba(94, 93, 93, 0.23);
   border-radius: 15px;
   overflow: hidden;
+}
+.card-dish:hover {
+  cursor: pointer;
 }
 .card-dish__menu {
   overflow: hidden;
@@ -475,13 +491,13 @@ html {
   width: 0;
   display: inline-block;
   height: 75px;
-  background-color: #99E2D0;
+  background-color: rgb(153, 226, 208);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .card-dish--check i {
-  color: #F6F6F6;
+  color: rgb(246, 246, 246);
   font-size: 25px;
 }
 .card-dish:hover .card-dish--check {
