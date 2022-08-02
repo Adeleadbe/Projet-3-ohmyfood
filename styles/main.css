@@ -49,11 +49,10 @@ h3, i, .menu-card h2 {
 }
 .loading-spinner {
   opacity: 0.4;
-  animation: transition 2s ease-in-out forwards;
+  animation: transition 2s forwards;
 }
 .loading-spinner__circle {
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 0;
   bottom: 0;
@@ -68,7 +67,7 @@ h3, i, .menu-card h2 {
 }
 
 .bloc-page {
-  animation: transition-page 1400ms ease-in-out forwards;
+  animation: transition-page 1400ms forwards;
 }
 
 @keyframes transition {
@@ -492,7 +491,6 @@ html {
 }
 .card-dish--check {
   width: 0;
-  display: inline-block;
   height: 75px;
   background-color: rgb(153, 226, 208);
   display: flex;
