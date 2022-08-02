@@ -63,6 +63,9 @@
     height: 70px;
     border-radius: 20px;
     position: relative;
+    &:hover {
+        background-color: rgba(146, 86, 220, 0.2);
+    }
     & p {
         position: absolute;
         border: 2px solid $color-primary;
@@ -73,7 +76,7 @@
         left: -13px;
         top: 7px;
     }
-    & i{
+    & i {
         padding: 25px 20px 0px 33px;
         opacity: 0.5;
     }
@@ -108,4 +111,4 @@
             padding-top: 5px;
         }
     }
-  }
+}

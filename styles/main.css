@@ -310,6 +310,9 @@ article .menu-card__btn {
   border-radius: 20px;
   position: relative;
 }
+.explanations__choice:hover {
+  background-color: rgba(146, 86, 220, 0.2);
+}
 .explanations__choice p {
   position: absolute;
   border: 2px solid rgb(147, 86, 220);
