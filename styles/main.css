@@ -469,14 +469,12 @@ html {
 }
 .card-dish__menu h3 {
   margin: 13px 0 8px 12px;
-  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 .card-dish__menu p {
   margin-left: 12px;
   margin-top: 0;
-  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
