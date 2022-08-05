@@ -1,33 +1,23 @@
 .loading-spinner {
     opacity: 0.4;
-    animation: transition 2s forwards;
-    &__circle{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    &__circle {
         width: 120px;
         height: 120px;
-        border : 16px solid black;
-        border-top: 16px solid $color-secondary;
+        border: 16px solid black;
+        border-top: 16px solid rgb(255, 121, 218);
         border-radius: 50%;
         animation: spin 1s linear forwards;
     }
 }
 
 .bloc-page {
-    animation: transition-page 1400ms forwards;
-}
-
-@keyframes transition {
-    0% {
-        opacity: 0.4;
-    }
-    100% {
-        opacity: 1;
-    }
+    animation: transition-page 2300ms forwards;
 }
 
 @keyframes spin {
@@ -54,7 +44,6 @@
         visibility: visible;
     }
 }
-
 
 .heart--pink {
         transition: all .4s ease-out;

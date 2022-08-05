@@ -49,15 +49,14 @@ h3, i, .menu-card h2 {
 }
 .loading-spinner {
   opacity: 0.4;
-  animation: transition 2s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 .loading-spinner__circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
   width: 120px;
   height: 120px;
   border: 16px solid black;
@@ -67,17 +66,9 @@ h3, i, .menu-card h2 {
 }
 
 .bloc-page {
-  animation: transition-page 1400ms forwards;
+  animation: transition-page 2300ms forwards;
 }
 
-@keyframes transition {
-  0% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
