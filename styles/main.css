@@ -55,6 +55,7 @@ h3, i, .menu-card h2 {
   position: fixed;
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 .loading-spinner__circle {
   width: 120px;
