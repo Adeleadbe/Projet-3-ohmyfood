@@ -75,10 +75,16 @@
         &__button {
         text-align: center;
         }
+        
         & h2 {
-            border-bottom: 3px solid $color-tertiary;
-            width: 45px;
-            height: 28px;
+            &::after {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 45px;
+                margin-top: 4px;
+                background: $color-tertiary;
+            }
         }
     }
 }
